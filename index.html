@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Atlas — private AI assistant (operator: Ivan Pereira)</title>
+<meta name="description" content="Atlas is a private, single-operator AI assistant that works with its operator's own Google Workspace account. Not a public service.">
+<style>
+  :root{
+    --paper:#FAF7F2; --ink:#1C1917; --muted:#78716C; --line:#E7E5E4;
+    --teal:#0F766E; --terracotta:#C2410C;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:64px 24px 96px}
+  .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--terracotta);font-weight:600;margin:0 0 18px}
+  h1{font-family:Literata,Georgia,"Times New Roman",serif;font-weight:600;font-size:44px;line-height:1.1;margin:0 0 20px;letter-spacing:-.01em}
+  h2{font-family:Literata,Georgia,serif;font-weight:600;font-size:23px;line-height:1.25;margin:44px 0 12px}
+  p{margin:0 0 16px}
+  .lead{font-size:20px;color:#3F3A36}
+  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:28px 0}
+  .card h2{margin-top:0;font-size:19px}
+  ul{margin:0 0 16px;padding-left:22px}
+  li{margin:6px 0}
+  code{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px;background:#F1EDE7;padding:2px 6px;border-radius:5px}
+  a{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(15,118,110,.35)}
+  a:hover{border-bottom-color:var(--teal)}
+  footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+  .links{display:flex;gap:18px;flex-wrap:wrap;margin-top:6px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="kicker">Private tool · not a public service</p>
+  <h1>Atlas</h1>
+
+  <p class="lead">Atlas is a private, single-operator AI assistant. It works inside one person's
+  Google Workspace account to help that person organise their own email, calendar and files.
+  It is not offered to the public, it has no other users, and it collects nothing from anyone else.</p>
+
+  <div class="card">
+    <h2>What Atlas does</h2>
+    <ul>
+      <li>Reads and triages the operator's own Gmail — labels, summaries, search, draft preparation.</li>
+      <li>Manages the operator's own Google Calendar — creates and updates events and reminders.</li>
+      <li>Organises the operator's own Google Drive, Docs and Sheets files.</li>
+      <li>Produces drafts and summaries for the operator to review. Outbound messages are sent only with the operator's explicit approval.</li>
+    </ul>
+  </div>
+
+  <h2>Who operates it</h2>
+  <p>Atlas is built and operated by <strong>Ivan Pereira</strong> (Barcelona, Spain) for his own personal and
+  business productivity. It is self-hosted software on infrastructure he controls inside the European Union.
+  There is no company account, no customer account and no sign-up.</p>
+
+  <h2>Which Google data it accesses — and why</h2>
+  <p>Access is granted by the operator himself, through Google's own OAuth consent flow, for his own account
+  only. Atlas requests the following scopes:</p>
+  <ul>
+    <li><code>mail.google.com</code> and <code>gmail.settings.basic</code> — read/manage the operator's mail and his own filters.</li>
+    <li><code>calendar</code> — read and manage his calendar.</li>
+    <li><code>drive</code> — access files he already owns or can open.</li>
+    <li><code>documents</code>, <code>spreadsheets</code> — read and edit his own Docs and Sheets.</li>
+    <li><code>meetings.space.*</code> — create and read his own Google Meet spaces.</li>
+  </ul>
+  <p>Atlas's use of Google user data adheres to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>,
+  including the <strong>Limited Use</strong> requirements. Data is never sold, never used for advertising,
+  and never transferred to third parties except the infrastructure needed to run the assistant (described in the privacy policy).</p>
+
+  <h2>Privacy policy &amp; terms</h2>
+  <p>Full detail — exactly what is stored, where, for how long, and how to revoke access — is in the
+  <a href="/privacy.html">Privacy Policy</a>. The <a href="/terms.html">Terms of Service</a> describe the
+  conditions of use for this internal tool.</p>
+
+  <footer>
+    <div>Operator: Ivan Pereira · Barcelona, Spain · Contact: <a href="mailto:atlasswe@agentmail.to">atlasswe@agentmail.to</a></div>
+    <div class="links">
+      <a href="/privacy.html">Privacy Policy</a>
+      <a href="/terms.html">Terms of Service</a>
+    </div>
+    <div style="margin-top:14px">Last updated: 12 September 2026</div>
+  </footer>
+
+</div>
+</body>
+</html>

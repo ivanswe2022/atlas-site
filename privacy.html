@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Atlas</title>
+<meta name="description" content="Privacy policy for Atlas, a private single-operator AI assistant, including how it accesses and handles Google user data.">
+<style>
+  :root{--paper:#FAF7F2;--ink:#1C1917;--muted:#78716C;--line:#E7E5E4;--teal:#0F766E;--terracotta:#C2410C}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--paper);color:var(--ink);
+    font-family:"DM Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:760px;margin:0 auto;padding:64px 24px 96px}
+  .kicker{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--terracotta);font-weight:600;margin:0 0 18px}
+  h1{font-family:Literata,Georgia,serif;font-weight:600;font-size:38px;line-height:1.12;margin:0 0 10px}
+  h2{font-family:Literata,Georgia,serif;font-weight:600;font-size:22px;line-height:1.3;margin:40px 0 12px}
+  h3{font-size:17px;margin:26px 0 8px}
+  p{margin:0 0 15px}
+  ul{margin:0 0 15px;padding-left:22px}
+  li{margin:6px 0}
+  code{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px;background:#F1EDE7;padding:2px 6px;border-radius:5px}
+  a{color:var(--teal);text-decoration:none;border-bottom:1px solid rgba(15,118,110,.35)}
+  .meta{color:var(--muted);font-size:15px;margin-bottom:28px}
+  .callout{background:#fff;border:1px solid var(--line);border-left:3px solid var(--teal);border-radius:10px;padding:18px 20px;margin:24px 0}
+  footer{margin-top:56px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <p class="kicker">Atlas · privacy</p>
+  <h1>Privacy Policy</h1>
+  <p class="meta">Effective 12 September 2026 · Last updated 12 September 2026</p>
+
+  <p>Atlas ("the assistant") is a private, self-hosted AI assistant operated by Ivan Pereira
+  ("the operator", "I") for his own personal and business use. This policy explains what data the
+  assistant handles, why, where it is stored, and how access can be revoked.</p>
+
+  <div class="callout">
+    <strong>Scope.</strong> Atlas has exactly one user: its operator. It is not offered to the public,
+    it has no customer accounts, and it does not knowingly process data belonging to anyone other than
+    the operator. Data of third parties may be present in the operator's own mailbox or calendar
+    simply because it was sent to him; it is not collected, profiled, or repurposed.
+  </div>
+
+  <h2>1. Who is responsible</h2>
+  <p>Data controller: <strong>Ivan Pereira</strong>, individual, Barcelona, Spain.<br>
+  Contact for any privacy question or request: <a href="mailto:atlasswe@agentmail.to">atlasswe@agentmail.to</a>.</p>
+
+  <h2>2. What data Atlas accesses</h2>
+  <p>Atlas connects to the operator's own Google account using Google's OAuth 2.0 authorisation
+  flow. The operator grants access himself, and can revoke it at any time (see section 8).
+  With that grant, Atlas accesses:</p>
+
+  <h3>Google user data</h3>
+  <ul>
+    <li><strong>Gmail</strong> (<code>https://mail.google.com/</code>, <code>https://www.googleapis.com/auth/gmail.settings.basic</code>):
+      messages, threads, labels, attachments and the operator's Gmail settings/filters — used to read, search,
+      summarise, label and draft correspondence, and to manage his own filters.</li>
+    <li><strong>Google Calendar</strong> (<code>https://www.googleapis.com/auth/calendar</code>):
+      calendars, events, attendees, free/busy information — used to read his schedule, create and update
+      events, and find free slots.</li>
+    <li><strong>Google Drive</strong> (<code>https://www.googleapis.com/auth/drive</code>):
+      files and metadata in the operator's Drive — used to find, read, organise and share his own files.</li>
+    <li><strong>Google Docs and Sheets</strong> (<code>documents</code>, <code>spreadsheets</code>):
+      document content — used to read and edit documents he owns.</li>
+    <li><strong>Google Meet</strong> (<code>meetings.space.created</code>, <code>readonly</code>, <code>settings</code>):
+      meeting spaces — used to create and read meeting links he creates.</li>
+  </ul>
+
+  <h3>Other data</h3>
+  <ul>
+    <li>Configuration and task notes the operator gives the assistant.</li>
+    <li>Technical logs of assistant runs (what task ran, when, and whether it succeeded).</li>
+  </ul>
+
+  <h2>3. How Google user data is used</h2>
+  <p>Google user data is used <strong>solely</strong> to provide the assistant's functions to its operator:
+  reading and organising his mail, managing his calendar, and handling his files and documents — always on
+  his instruction.</p>
+  <p>Atlas's use of information received from Google APIs adheres to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>,
+  including the <strong>Limited Use</strong> requirements. Specifically:</p>
+  <ul>
+    <li>Google user data is <strong>never sold</strong>.</li>
+    <li>It is <strong>never used for advertising</strong>, ad personalisation, or profiling.</li>
+    <li>It is <strong>not used to train or improve generalised AI/ML models</strong>.</li>
+    <li>It is <strong>not transferred to third parties</strong>, except the technical processors listed in section 5, which
+      are bound by contract to confidentiality and to the same limits, and never for their own purposes.</li>
+    <li>Humans do not read it, other than the operator himself (who owns the data) — and no Google personnel or
+      third-party reviewer ever sees it.</li>
+  </ul>
+
+  <h2>4. Where data is stored and for how long</h2>
+  <ul>
+    <li><strong>OAuth credentials</strong> (access and refresh tokens) are stored encrypted-at-rest, with
+      file permissions restricted to the operator's service account, on his own self-hosted server located in the
+      European Union. Tokens are never published or shared.</li>
+    <li><strong>Derived working data</strong> (e.g. cached summaries, indexes, task state) is stored on the same
+      server for as long as it is useful to the operator — typically days to a few months — and is
+      deletable on request.</li>
+    <li><strong>Retention of copies:</strong> Atlas does not keep bulk copies of mailbox or Drive content beyond
+      what a task requires. Content fetched for a task is processed and, where cached, expired on a rolling basis.</li>
+  </ul>
+
+  <h2>5. Sharing and processors</h2>
+  <p>Data is not shared with third parties for their own purposes. To function, the assistant sends the
+  minimum content required for a given task to these technical processors:</p>
+  <ul>
+    <li><strong>Large-language-model API providers</strong> (Anthropic, DeepSeek) — to generate summaries, drafts and
+      classification. Requests are processed under their enterprise/API terms; they are not permitted to use the data
+      to train their models, and no human review is requested or authorised.</li>
+    <li><strong>Hosting infrastructure</strong> — the operator's own server (European Union), plus static-site hosting for
+      this page.</li>
+  </ul>
+  <p>No data is disclosed to any other party except where legally required, and in that case only the minimum required.</p>
+
+  <h2>6. Security</h2>
+  <ul>
+    <li>All Google API traffic is over TLS.</li>
+    <li>OAuth tokens are stored with owner-only file permissions (0600) on a single-tenant host, and are never transmitted to browsers or third parties.</li>
+    <li>Access to the host is restricted to the operator, with key-based authentication.</li>
+    <li>Google access can be revoked unilaterally by the operator at any moment (section 8), which immediately invalidates the tokens.</li>
+  </ul>
+
+  <h2>7. Cookies and tracking</h2>
+  <p>This website sets no cookies, runs no analytics, and embeds no third-party trackers. It is a static page.</p>
+
+  <h2>8. Revoking access, and your rights</h2>
+  <p>Because the assistant's only user is the operator, the relevant rights (access, correction, deletion,
+  portability, objection) are exercised by him directly. Access for everyone else is impossible by design.</p>
+  <p>To revoke Atlas's access to Google data at any time:</p>
+  <ul>
+    <li>Visit <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a> and
+      remove the app, <em>or</em></li>
+    <li>Use the Gmail / Google Account security page to remove third-party access.</li>
+  </ul>
+  <p>Revocation stops all further access immediately; tokens held by the assistant stop working at once.
+  Any cached derived data can be deleted on request to the contact above.</p>
+
+  <h2>9. Children</h2>
+  <p>Atlas is not directed to children and is not available to anyone other than its operator.</p>
+
+  <h2>10. Changes to this policy</h2>
+  <p>Material changes will be published on this page with an updated "last updated" date. Continued operation
+  of the assistant after a change constitutes acceptance of the revised policy by the operator.</p>
+
+  <h2>11. Contact</h2>
+  <p><a href="mailto:atlasswe@agentmail.to">atlasswe@agentmail.to</a></p>
+
+  <footer>
+    <div><a href="/">Atlas home</a> · <a href="/terms.html">Terms of Service</a></div>
+    <div style="margin-top:10px">Operated by Ivan Pereira, Barcelona, Spain.</div>
+  </footer>
+
+</div>
+</body>
+</html>
